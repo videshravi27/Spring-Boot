@@ -22,7 +22,7 @@ public class UserSecurity {  // Renamed from 'UserSecruity' to 'UserSecurity'
         http
                 .csrf(csrf -> csrf.disable()) // Disable CSRF protection
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/getAll").authenticated() // Require authentication for this endpoint
+                        .requestMatchers("/test").authenticated() // Require authentication for this endpoint
                         .anyRequest().permitAll() // Allow all other requests
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Set session to stateless
